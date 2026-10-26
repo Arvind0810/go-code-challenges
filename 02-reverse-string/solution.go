@@ -4,5 +4,10 @@ package reversestring
 // Multi-byte UTF-8 characters must remain intact.
 func Reverse(s string) string {
 	// TODO: implement
-	return ""
+	rn := []rune(s)
+	nrn := []rune{}
+	for i := len(rn) - 1; i >= 0; i-- {
+		nrn = append(nrn, rn[i])
+	}
+	return string(nrn)
 }
